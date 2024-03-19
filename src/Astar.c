@@ -42,6 +42,7 @@ int main()
 	fscanf(in, "%d", &heur[i]);
 	fgetc(in);
     }
+    fclose(in);
 
     int node, min=1000, visits=0, nowa;
     int* nodes = malloc(n*sizeof(int));
@@ -88,6 +89,8 @@ int main()
     free(nodes);
     free(weights);
     free(visited);
+    free(heur);
+    
 
     return 0;
 }
