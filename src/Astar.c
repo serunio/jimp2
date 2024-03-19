@@ -80,6 +80,14 @@ int main()
         node = nodes[node];
     }
     printf("(1)\n");
+    for(int i = 0; i<n; i++)
+    {
+        free(graf[i]);
+    }
+    free(graf);
+    free(nodes);
+    free(weights);
+    free(visited);
 
     return 0;
 }
